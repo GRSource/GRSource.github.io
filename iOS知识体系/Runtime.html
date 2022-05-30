@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Runtime | 文档</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="Just playing around">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.9de76d75.js" as="script"><link rel="preload" href="/assets/js/2.98ea7a63.js" as="script"><link rel="preload" href="/assets/js/5.f577ebb9.js" as="script"><link rel="prefetch" href="/assets/js/10.fa8eed47.js"><link rel="prefetch" href="/assets/js/11.f98f25e0.js"><link rel="prefetch" href="/assets/js/12.1ab9b5a3.js"><link rel="prefetch" href="/assets/js/13.75251b00.js"><link rel="prefetch" href="/assets/js/14.b5068189.js"><link rel="prefetch" href="/assets/js/15.33abd7e1.js"><link rel="prefetch" href="/assets/js/16.34ed8053.js"><link rel="prefetch" href="/assets/js/17.b3d52ea3.js"><link rel="prefetch" href="/assets/js/18.cbe71205.js"><link rel="prefetch" href="/assets/js/19.c632cb86.js"><link rel="prefetch" href="/assets/js/20.90d9a221.js"><link rel="prefetch" href="/assets/js/21.15cb7700.js"><link rel="prefetch" href="/assets/js/22.62ea968a.js"><link rel="prefetch" href="/assets/js/23.b743fdd5.js"><link rel="prefetch" href="/assets/js/24.5d157647.js"><link rel="prefetch" href="/assets/js/25.1935fba3.js"><link rel="prefetch" href="/assets/js/26.fd22f8ee.js"><link rel="prefetch" href="/assets/js/27.f47adfe7.js"><link rel="prefetch" href="/assets/js/28.d9f5719d.js"><link rel="prefetch" href="/assets/js/29.82cbf665.js"><link rel="prefetch" href="/assets/js/3.b96f613e.js"><link rel="prefetch" href="/assets/js/30.9f901f01.js"><link rel="prefetch" href="/assets/js/31.d9e2f61c.js"><link rel="prefetch" href="/assets/js/32.b14052e9.js"><link rel="prefetch" href="/assets/js/33.1b2e5efd.js"><link rel="prefetch" href="/assets/js/34.4bf7f44f.js"><link rel="prefetch" href="/assets/js/35.98d5fd2b.js"><link rel="prefetch" href="/assets/js/36.cdaf1c2f.js"><link rel="prefetch" href="/assets/js/37.a67bdb9a.js"><link rel="prefetch" href="/assets/js/38.5d856b83.js"><link rel="prefetch" href="/assets/js/39.27169c95.js"><link rel="prefetch" href="/assets/js/4.268c621c.js"><link rel="prefetch" href="/assets/js/40.8763c647.js"><link rel="prefetch" href="/assets/js/41.cd839f43.js"><link rel="prefetch" href="/assets/js/42.a97bf97a.js"><link rel="prefetch" href="/assets/js/43.fd126bb1.js"><link rel="prefetch" href="/assets/js/44.50e2b10d.js"><link rel="prefetch" href="/assets/js/45.0c29263b.js"><link rel="prefetch" href="/assets/js/46.fdee27aa.js"><link rel="prefetch" href="/assets/js/47.c7c7e966.js"><link rel="prefetch" href="/assets/js/48.80bc6f0a.js"><link rel="prefetch" href="/assets/js/49.d457b0ac.js"><link rel="prefetch" href="/assets/js/50.cea3b0e6.js"><link rel="prefetch" href="/assets/js/51.eaab3e31.js"><link rel="prefetch" href="/assets/js/52.010a2dfb.js"><link rel="prefetch" href="/assets/js/53.3622f7b6.js"><link rel="prefetch" href="/assets/js/54.817aba2b.js"><link rel="prefetch" href="/assets/js/55.c3984ff9.js"><link rel="prefetch" href="/assets/js/56.6f20785e.js"><link rel="prefetch" href="/assets/js/57.07c7f6fc.js"><link rel="prefetch" href="/assets/js/58.4ec50d24.js"><link rel="prefetch" href="/assets/js/59.626b42b0.js"><link rel="prefetch" href="/assets/js/6.b9249342.js"><link rel="prefetch" href="/assets/js/60.ba2af5c7.js"><link rel="prefetch" href="/assets/js/61.6e22c298.js"><link rel="prefetch" href="/assets/js/62.df85ea27.js"><link rel="prefetch" href="/assets/js/63.cd3c1f6a.js"><link rel="prefetch" href="/assets/js/64.d0f75a86.js"><link rel="prefetch" href="/assets/js/65.12e0c392.js"><link rel="prefetch" href="/assets/js/66.aac422ac.js"><link rel="prefetch" href="/assets/js/67.3ff890c6.js"><link rel="prefetch" href="/assets/js/68.c6d12518.js"><link rel="prefetch" href="/assets/js/69.455e0c09.js"><link rel="prefetch" href="/assets/js/7.375eddd0.js"><link rel="prefetch" href="/assets/js/70.73d975e7.js"><link rel="prefetch" href="/assets/js/71.66528e07.js"><link rel="prefetch" href="/assets/js/72.a608a326.js"><link rel="prefetch" href="/assets/js/73.b8ed0811.js"><link rel="prefetch" href="/assets/js/74.68f4db5d.js"><link rel="prefetch" href="/assets/js/75.85059bdc.js"><link rel="prefetch" href="/assets/js/8.a04b9d9b.js"><link rel="prefetch" href="/assets/js/9.04a00c43.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>iOS</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/iOS知识体系/UI视图.html" class="sidebar-link">UI视图</a></li><li><a href="/iOS知识体系/Objective-C.html" class="sidebar-link">Objective-C</a></li><li><a href="/iOS知识体系/Swift.html" class="sidebar-link">Swift</a></li><li><a href="/iOS知识体系/Runtime.html" class="active sidebar-link">Runtime</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/iOS知识体系/Runtime.html#runtime数据结构" class="sidebar-link">Runtime数据结构</a></li><li class="sidebar-sub-header"><a href="/iOS知识体系/Runtime.html#类对象和元类对象" class="sidebar-link">类对象和元类对象</a></li><li class="sidebar-sub-header"><a href="/iOS知识体系/Runtime.html#方法缓存查找" class="sidebar-link">方法缓存查找</a></li><li class="sidebar-sub-header"><a href="/iOS知识体系/Runtime.html#消息转发" class="sidebar-link">消息转发</a></li><li class="sidebar-sub-header"><a href="/iOS知识体系/Runtime.html#method-swizzling" class="sidebar-link">Method-Swizzling</a></li><li class="sidebar-sub-header"><a href="/iOS知识体系/Runtime.html#动态添加方法" class="sidebar-link">动态添加方法</a></li><li class="sidebar-sub-header"><a href="/iOS知识体系/Runtime.html#动态创建类" class="sidebar-link">动态创建类</a></li><li class="sidebar-sub-header"><a href="/iOS知识体系/Runtime.html#runtime问题" class="sidebar-link">Runtime问题</a></li></ul></li><li><a href="/iOS知识体系/内存管理.html" class="sidebar-link">内存管理</a></li><li><a href="/iOS知识体系/Block.html" class="sidebar-link">Block</a></li><li><a href="/iOS知识体系/多线程.html" class="sidebar-link">多线程</a></li><li><a href="/iOS知识体系/线程锁.html" class="sidebar-link">线程锁</a></li><li><a href="/iOS知识体系/RunLoop.html" class="sidebar-link">RunLoop</a></li><li><a href="/iOS知识体系/动画.html" class="sidebar-link">动画</a></li><li><a href="/iOS知识体系/数据持久化.html" class="sidebar-link">数据持久化</a></li><li><a href="/iOS知识体系/加密.html" class="sidebar-link">加密</a></li><li><a href="/iOS知识体系/网络.html" class="sidebar-link">网络</a></li><li><a href="/iOS知识体系/设计模式.html" class="sidebar-link">设计模式</a></li><li><a href="/iOS知识体系/架构&amp;框架设计.html" class="sidebar-link">架构&amp;框架设计</a></li><li><a href="/iOS知识体系/第三方库.html" class="sidebar-link">第三方库</a></li><li><a href="/iOS知识体系/ReactNative.html" class="sidebar-link">React Native</a></li><li><a href="/iOS知识体系/算法.html" class="sidebar-link">算法</a></li><li><a href="/iOS知识体系/软件优化.html" class="sidebar-link">软件优化</a></li><li><a href="/iOS知识体系/Git.html" class="sidebar-link">Git</a></li><li><a href="/iOS知识体系/iOS内核.html" class="sidebar-link">iOS内核</a></li><li><a href="/iOS知识体系/视频及音频处理.html" class="sidebar-link">视频及音频处理</a></li><li><a href="/iOS知识体系/直播类软件实现方案.html" class="sidebar-link">直播类软件实现方案</a></li><li><a href="/iOS知识体系/聊天类软件实现方案.html" class="sidebar-link">聊天类软件实现方案</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>iOS笔记</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="runtime"><a href="#runtime" class="header-anchor">#</a> Runtime</h1> <h2 id="runtime数据结构"><a href="#runtime数据结构" class="header-anchor">#</a> Runtime数据结构</h2> <p><strong>objc_object</strong><br> <img src="/assets/img/objc_object.46e7d6fd.png" alt="objc_object"><br>
+isa指针指向它所对应的Class，即类对象
+<strong>objc_class</strong>继承至objc_object，是一个类对象
+<img src="/assets/img/objc_class.ed56b711.png" alt="objc_class"><br>
+superclass指针指向父类对象；cache_t表示方法缓存；class_data_bits_t存了对象的一些信息，比如说方法、属性、协议等等<br>
+因为objc_class继承至objc_object，所以objc_class也有一个isa指针，其指向元类对象
+如果我们调用一个实例的实例方法，实际上就是通过实例isa指针到它所对应的类对象当中去查找，如果我们调用的是一个类方法，实际上就是通过类对象的isa指针到它的元类对象当中去查找。<br> <img src="/assets/img/cache_t.0147a411.png" alt="cache_t"><br>
+cache_t用于快速查找方法的执行函数,是可增量扩展的哈希表结构,是局部性原理的最佳应用<br>
+cache_t由bucket_t的数组组成，bucket_t由对应的key和imp来实现<br> <img src="/assets/img/bucket_t.ccd2f419.png" alt="bucket_t"><br>
+class_data_bits_t主要是对class_rw_t的封装，class_rw_t代表了类相关的读写信息（如方法、属性、协议）和对class_ro_t的封装<br> <img src="/assets/img/class_rw_t.9a04a7ca.png" alt="class_rw_t">
+class_rw_t主要由四个部分组成：</p> <ul><li>class_ro_t</li> <li>protocols</li> <li>properties</li> <li>methods</li></ul> <p>1.我们通过分类添加的一些信息都是在protocols、properties和methods当中，这三个数据结构是一个二维数组，他们都继承至list_array_tt，我们以methods为例，methods每个元素都是一个一维数组类型，每个一维数组又存了很多method_t类型的数据结构，图解
+<img src="/assets/img/class_rw_t图解.ac5afe9f.png" alt="class_rw_t图解">
+method_t的图解：<br> <img src="/assets/img/method_t.5f4baf5d.png" alt="method_t">
+properties由property_t组成，property_t图解：
+<img src="/assets/img/property_t.dcd3feac.png" alt="property_t">
+protocols由protocol_ref_t组成，图解：
+<img src="/assets/img/prototol_ref_t.f69be70b.png" alt="protocol_ref_t"></p> <p>2.class_ro_t代表了类相关的只读信息，由五个部分组成：</p> <ul><li>name //类名</li> <li>ivars //成员变量</li> <li>baseProperties  //属性</li> <li>baseProtocols //协议</li> <li>baseMethodList //方法列表<br> <img src="/assets/img/class_ro_t.4d4fc24e.png" alt="class_ro_t">
+而这里的properties、protocols、methodList都是一维数组，存储的都是原始类当中的一些信息，我们以methodList为例，里面存的是method_t类型的数据结构，跟class_rw_t当中的method_t是一致的，图解：
+<img src="/assets/img/class_ro_t图解.def78f3f.png" alt="class_ro_t图解"></li></ul> <hr> <p>1.函数四要素：名称、返回值、参数、函数体。和method_t对应关系如图：
+<img src="/assets/img/method_t图解.b815f8c7.png" alt="method_t图解">
+types对应于方法签名的type Encodings，如图
+<img src="/assets/img/typeEncodings.63c7e1d4.png" alt="typeEncodings"></p> <hr> <p><img src="/assets/img/runtime图解.d5083177.png" alt="runtime图解"></p> <h2 id="类对象和元类对象"><a href="#类对象和元类对象" class="header-anchor">#</a> 类对象和元类对象</h2> <p>问1：类对象和元类对象的区别？<br>
+1.类对象存储实例方法列表等信息<br>
+2.元类对象存储类方法列表等信息<br> <img src="/assets/img/runtime继承关系.6612161c.png" alt="runtime继承关系">
+问2：objective-c消息传递的过程？<br>
+当我们调用某个实例的方法时，首先系统会根据当前实例的isa指针找到他的类对象，然后在他的类对象中去遍历方法列表，去查找同名的方法实现，如果没有查找到的话，就会顺次去查找父类的方法列表，然后再顺次去查找根类对象的方法类别，如果没有找到就会进入消息转发流程，后面会介绍消息转发。
+当我们调用类方法，就会通过类对象的isa指针找到元类对象，顺次遍历方法列表，直到根元类对象，然后再到根类对象，然后再到nil，进入消息转发流程。</p> <p>** 消息传递<br> <img src="/assets/img/objc_msgSend.7cc34ef2.png" alt="objc_msgSend"> <img src="/assets/img/消息传递1.29e0a60d.png" alt="消息传递1"> <img src="/assets/img/消息传递2.122a256e.png" alt="消息传递2"></p> <p>问3：消息传递查找流程？<br>
+调用方法后，先查找缓存，如果缓存中有对应选择器方法的实现，就调用函数指针，完成消息传递，如果缓存中没有，就调用当前类对象的方法列表，如果命中，就通过函数指针进行调用，完成消息传递，如果没有，则逐级在父类对象中进行查找，如果某个父类命中，则通过函数指针调用函数实现，完成消息传递，如果查到根类对象还没有查到，就进入消息转发流程，结束消息传递。</p> <h2 id="方法缓存查找"><a href="#方法缓存查找" class="header-anchor">#</a> 方法缓存查找</h2> <p>问1：给你值SEL，目标是对应缓存中bucket_t中的IMP<br>
+通过哈希查找到对应的bucket_t，哈希算法采用是key &amp; mask，其中mask是cache_t的一个成员变量<br>
+问2：当前类中查找方法<br>
+对于已排序好的列表，采用二分查找算法查找方法对应执行函数<br>
+对于没有排序的列表，采用一般遍历查找方法对应执行函数<br>
+问3：缓存查找和当前类中方法查找的区别？<br>
+优先查找缓存，采用哈希查找算法，如果没有命中，就继续查找当前类对象的方法列表，对于已排序的方法列表采用二分查找，对于没有排序的方法列表采用一般遍历查找，如果还没找到，就逐级父类进行查找。</p> <h2 id="消息转发"><a href="#消息转发" class="header-anchor">#</a> 消息转发</h2> <p>当向Objective-C对象发送一个消息，但runtime在当前类及父类中找不到此selector对应的方法时，消息转发(message forwarding)流程开始启动。</p> <p>动态方法解析
+向当前类发送+resolveInstanceMethod:(对于类方法则为+resolveClassMethod:)消息，如果返回YES,则系统认为请求的方法已经加入到了，则会重新发送消息。
+快速转发路径
+如果当前target实现了-forwardingTargetForSelector:方法,则调用此方法。如果此方法返回除nil和self的其他对象，则向返回对象重新发送消息。
+慢速转发路径
+首先runtime发送-methodSignatureForSelector:消息查看Selector对应的方法签名，即参数与返回值的类型信息。如果有方法签名返回，runtime则根据方法签名创建描述该消息的NSInvocation，向当前对象发送forwardInvocation:消息，以创建的NSInvocation对象作为参数；若methodSignatureForSelector:无方法签名返回，则向当前对象发送doesNotRecognizeSelector:消息,程序抛出异常退出。</p> <h2 id="method-swizzling"><a href="#method-swizzling" class="header-anchor">#</a> Method-Swizzling</h2> <div class="language- extra-class"><pre><code>Method test = class_getInstanceMethod(self, @selector(test));
+Method otherTest = class_getInstanceMethod(self, @selector(otherTest));
+method_exchangeImplementations(test, otherTest);
+</code></pre></div><h2 id="动态添加方法"><a href="#动态添加方法" class="header-anchor">#</a> 动态添加方法</h2> <p><img src="/assets/img/动态添加方法.c812aee9.png" alt="动态添加方法"></p> <h2 id="动态创建类"><a href="#动态创建类" class="header-anchor">#</a> 动态创建类</h2> <h3 id="使用objc-allocateclasspair创建一个类class"><a href="#使用objc-allocateclasspair创建一个类class" class="header-anchor">#</a> 使用objc_allocateClassPair创建一个类Class</h3> <div class="language- extra-class"><pre><code>const char * className = &quot;Calculator&quot;;
+Class kclass = objc_getClass(className);
+if (!kclass) 
+{
+   Class superClass = [NSObject class]; 
+   kclass = objc_allocateClassPair(superClass, className, 0);
+}
+</code></pre></div><h3 id="使用class-addivar添加一个成员变量"><a href="#使用class-addivar添加一个成员变量" class="header-anchor">#</a> 使用class_addIvar添加一个成员变量</h3> <div class="language- extra-class"><pre><code>NSUInteger size;
+NSUInteger alignment;
+NSGetSizeAndAlignment(&quot;*&quot;, &amp;size, &amp;alignment);
+class_addIvar(kclass, &quot;expression&quot;, size, alignment, &quot;*&quot;);
+
+
+注:
+1.type定义参考:https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtTypeEncodings.html
+2.&quot;*&quot;星号代表字符(),iOS字符为4位，并采用4位对齐kclass
+</code></pre></div><h3 id="使用class-addmethod添加成员方法"><a href="#使用class-addmethod添加成员方法" class="header-anchor">#</a> 使用class_addMethod添加成员方法</h3> <p>class_addMethod(kclass, @selector(setExpressionFormula:), (IMP)setExpressionFormula, &quot;v@😡&quot;);
+class_addMethod(kclass, @selector(getExpressionFormula), (IMP)getExpressionFormula, &quot;@@😊;</p> <div class="language- extra-class"><pre><code>static void setExpressionFormula(id self, SEL cmd, id value)
+{
+   NSLog(@&quot;call setExpressionFormula&quot;);
+}
+
+static void getExpressionFormula(id self, SEL cmd)
+{
+    NSLog(@&quot;call getExpressionFormula&quot;);
+} 
+
+注:
+1.type定义参考:https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtTypeEncodings.html
+2.&quot;v@:@&quot;,解释v-返回值void类型,@-self指针id类型,:-SEL指针SEL类型,@-函数第一个参数为id类型
+3.&quot;@@:&quot;,解释@-返回值id类型,@-self指针id类型,:-SEL指针SEL类型,
+</code></pre></div><h3 id="注册到运行时环境"><a href="#注册到运行时环境" class="header-anchor">#</a> 注册到运行时环境</h3> <p>objc_registerClassPair(kclass);</p> <h3 id="实例化类"><a href="#实例化类" class="header-anchor">#</a> 实例化类</h3> <p>id instance = [[kclass alloc] init];</p> <h3 id="给变量赋值"><a href="#给变量赋值" class="header-anchor">#</a> 给变量赋值</h3> <p>object_setInstanceVariable(instance, &quot;expression&quot;, &quot;1+1&quot;);</p> <h3 id="获取变量值"><a href="#获取变量值" class="header-anchor">#</a> 获取变量值</h3> <p>void * value = NULL;
+object_getInstanceVariable(instance, &quot;expression&quot;, &amp;value);</p> <h3 id="调用函数"><a href="#调用函数" class="header-anchor">#</a> 调用函数</h3> <p>[instance performSelector:@selector(getExpressionFormula)];</p> <h2 id="runtime问题"><a href="#runtime问题" class="header-anchor">#</a> Runtime问题</h2> <p>问1：[obj foo]和objc_msgSend()函数之间有什么关系？<br>
+在编译器编译后会变成objc_msgSend()，然后进行消息传递<br>
+问2：能否向编译后的类中增加实例变量？<br>
+编译前创建的类已经完成了实例变量的布局，从runtime数据结构class_ro_t的只读特性可以看出编译后的类是不能增加实例变量的。<br>
+问3：能否向动态添加的类中增加实例变量？<br>
+可以，因为动态添加类的过程中，只要在注册类对(objc_registerClassPair)之前添加是可以的。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/iOS知识体系/Swift.html" class="prev">
+        Swift
+      </a></span> <span class="next"><a href="/iOS知识体系/内存管理.html">
+        内存管理
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.9de76d75.js" defer></script><script src="/assets/js/2.98ea7a63.js" defer></script><script src="/assets/js/5.f577ebb9.js" defer></script>
+  </body>
+</html>

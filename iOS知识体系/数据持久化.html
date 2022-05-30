@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>数据持久化 | 文档</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="Just playing around">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.9de76d75.js" as="script"><link rel="preload" href="/assets/js/2.98ea7a63.js" as="script"><link rel="preload" href="/assets/js/14.b5068189.js" as="script"><link rel="prefetch" href="/assets/js/10.fa8eed47.js"><link rel="prefetch" href="/assets/js/11.f98f25e0.js"><link rel="prefetch" href="/assets/js/12.1ab9b5a3.js"><link rel="prefetch" href="/assets/js/13.75251b00.js"><link rel="prefetch" href="/assets/js/15.33abd7e1.js"><link rel="prefetch" href="/assets/js/16.34ed8053.js"><link rel="prefetch" href="/assets/js/17.b3d52ea3.js"><link rel="prefetch" href="/assets/js/18.cbe71205.js"><link rel="prefetch" href="/assets/js/19.c632cb86.js"><link rel="prefetch" href="/assets/js/20.90d9a221.js"><link rel="prefetch" href="/assets/js/21.15cb7700.js"><link rel="prefetch" href="/assets/js/22.62ea968a.js"><link rel="prefetch" href="/assets/js/23.b743fdd5.js"><link rel="prefetch" href="/assets/js/24.5d157647.js"><link rel="prefetch" href="/assets/js/25.1935fba3.js"><link rel="prefetch" href="/assets/js/26.fd22f8ee.js"><link rel="prefetch" href="/assets/js/27.f47adfe7.js"><link rel="prefetch" href="/assets/js/28.d9f5719d.js"><link rel="prefetch" href="/assets/js/29.82cbf665.js"><link rel="prefetch" href="/assets/js/3.b96f613e.js"><link rel="prefetch" href="/assets/js/30.9f901f01.js"><link rel="prefetch" href="/assets/js/31.d9e2f61c.js"><link rel="prefetch" href="/assets/js/32.b14052e9.js"><link rel="prefetch" href="/assets/js/33.1b2e5efd.js"><link rel="prefetch" href="/assets/js/34.4bf7f44f.js"><link rel="prefetch" href="/assets/js/35.98d5fd2b.js"><link rel="prefetch" href="/assets/js/36.cdaf1c2f.js"><link rel="prefetch" href="/assets/js/37.a67bdb9a.js"><link rel="prefetch" href="/assets/js/38.5d856b83.js"><link rel="prefetch" href="/assets/js/39.27169c95.js"><link rel="prefetch" href="/assets/js/4.268c621c.js"><link rel="prefetch" href="/assets/js/40.8763c647.js"><link rel="prefetch" href="/assets/js/41.cd839f43.js"><link rel="prefetch" href="/assets/js/42.a97bf97a.js"><link rel="prefetch" href="/assets/js/43.fd126bb1.js"><link rel="prefetch" href="/assets/js/44.50e2b10d.js"><link rel="prefetch" href="/assets/js/45.0c29263b.js"><link rel="prefetch" href="/assets/js/46.fdee27aa.js"><link rel="prefetch" href="/assets/js/47.c7c7e966.js"><link rel="prefetch" href="/assets/js/48.80bc6f0a.js"><link rel="prefetch" href="/assets/js/49.d457b0ac.js"><link rel="prefetch" href="/assets/js/5.f577ebb9.js"><link rel="prefetch" href="/assets/js/50.cea3b0e6.js"><link rel="prefetch" href="/assets/js/51.eaab3e31.js"><link rel="prefetch" href="/assets/js/52.010a2dfb.js"><link rel="prefetch" href="/assets/js/53.3622f7b6.js"><link rel="prefetch" href="/assets/js/54.817aba2b.js"><link rel="prefetch" href="/assets/js/55.c3984ff9.js"><link rel="prefetch" href="/assets/js/56.6f20785e.js"><link rel="prefetch" href="/assets/js/57.07c7f6fc.js"><link rel="prefetch" href="/assets/js/58.4ec50d24.js"><link rel="prefetch" href="/assets/js/59.626b42b0.js"><link rel="prefetch" href="/assets/js/6.b9249342.js"><link rel="prefetch" href="/assets/js/60.ba2af5c7.js"><link rel="prefetch" href="/assets/js/61.6e22c298.js"><link rel="prefetch" href="/assets/js/62.df85ea27.js"><link rel="prefetch" href="/assets/js/63.cd3c1f6a.js"><link rel="prefetch" href="/assets/js/64.d0f75a86.js"><link rel="prefetch" href="/assets/js/65.12e0c392.js"><link rel="prefetch" href="/assets/js/66.aac422ac.js"><link rel="prefetch" href="/assets/js/67.3ff890c6.js"><link rel="prefetch" href="/assets/js/68.c6d12518.js"><link rel="prefetch" href="/assets/js/69.455e0c09.js"><link rel="prefetch" href="/assets/js/7.375eddd0.js"><link rel="prefetch" href="/assets/js/70.73d975e7.js"><link rel="prefetch" href="/assets/js/71.66528e07.js"><link rel="prefetch" href="/assets/js/72.a608a326.js"><link rel="prefetch" href="/assets/js/73.b8ed0811.js"><link rel="prefetch" href="/assets/js/74.68f4db5d.js"><link rel="prefetch" href="/assets/js/75.85059bdc.js"><link rel="prefetch" href="/assets/js/8.a04b9d9b.js"><link rel="prefetch" href="/assets/js/9.04a00c43.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>iOS</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/iOS知识体系/UI视图.html" class="sidebar-link">UI视图</a></li><li><a href="/iOS知识体系/Objective-C.html" class="sidebar-link">Objective-C</a></li><li><a href="/iOS知识体系/Swift.html" class="sidebar-link">Swift</a></li><li><a href="/iOS知识体系/Runtime.html" class="sidebar-link">Runtime</a></li><li><a href="/iOS知识体系/内存管理.html" class="sidebar-link">内存管理</a></li><li><a href="/iOS知识体系/Block.html" class="sidebar-link">Block</a></li><li><a href="/iOS知识体系/多线程.html" class="sidebar-link">多线程</a></li><li><a href="/iOS知识体系/线程锁.html" class="sidebar-link">线程锁</a></li><li><a href="/iOS知识体系/RunLoop.html" class="sidebar-link">RunLoop</a></li><li><a href="/iOS知识体系/动画.html" class="sidebar-link">动画</a></li><li><a href="/iOS知识体系/数据持久化.html" class="active sidebar-link">数据持久化</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/iOS知识体系/数据持久化.html#沙盒路径" class="sidebar-link">沙盒路径</a></li><li class="sidebar-sub-header"><a href="/iOS知识体系/数据持久化.html#数据持久化种类" class="sidebar-link">数据持久化种类</a></li><li class="sidebar-sub-header"><a href="/iOS知识体系/数据持久化.html#数据持久化区别" class="sidebar-link">数据持久化区别</a></li><li class="sidebar-sub-header"><a href="/iOS知识体系/数据持久化.html#sqlite并发的四种处理方式" class="sidebar-link">SQLite并发的四种处理方式</a></li><li class="sidebar-sub-header"><a href="/iOS知识体系/数据持久化.html#第三方持久化方案" class="sidebar-link">第三方持久化方案</a></li><li class="sidebar-sub-header"><a href="/iOS知识体系/数据持久化.html#数据库类型" class="sidebar-link">数据库类型</a></li></ul></li><li><a href="/iOS知识体系/加密.html" class="sidebar-link">加密</a></li><li><a href="/iOS知识体系/网络.html" class="sidebar-link">网络</a></li><li><a href="/iOS知识体系/设计模式.html" class="sidebar-link">设计模式</a></li><li><a href="/iOS知识体系/架构&amp;框架设计.html" class="sidebar-link">架构&amp;框架设计</a></li><li><a href="/iOS知识体系/第三方库.html" class="sidebar-link">第三方库</a></li><li><a href="/iOS知识体系/ReactNative.html" class="sidebar-link">React Native</a></li><li><a href="/iOS知识体系/算法.html" class="sidebar-link">算法</a></li><li><a href="/iOS知识体系/软件优化.html" class="sidebar-link">软件优化</a></li><li><a href="/iOS知识体系/Git.html" class="sidebar-link">Git</a></li><li><a href="/iOS知识体系/iOS内核.html" class="sidebar-link">iOS内核</a></li><li><a href="/iOS知识体系/视频及音频处理.html" class="sidebar-link">视频及音频处理</a></li><li><a href="/iOS知识体系/直播类软件实现方案.html" class="sidebar-link">直播类软件实现方案</a></li><li><a href="/iOS知识体系/聊天类软件实现方案.html" class="sidebar-link">聊天类软件实现方案</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>iOS笔记</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="数据持久化"><a href="#数据持久化" class="header-anchor">#</a> 数据持久化</h1> <h2 id="沙盒路径"><a href="#沙盒路径" class="header-anchor">#</a> 沙盒路径</h2> <ul><li>Documents</li> <li>Library</li> <li>Caches</li> <li>Preferences</li> <li>SystemData</li> <li>tmp</li></ul> <p>Document<br>
+会备份，一般用来存储需要持久化的数据。一般我们在项目中，我们会把一些用户的登录信息进行存储，以及搜索历史记录等等关键数据。</p> <p>Library<br>
+Library里面包含两个文件夹(Caches和Preferences)<br>
+Caches<br>
+缓存，iTUnes不会备份该目录。内存不足时会被清楚，应用没有运行时，可能会被清楚。一般存储体积大、不需要备份的非重要数据。<br>
+Preferences<br>
+保存持久化数据，会备份<br>
+NSUserDefaults默认存放在此文件夹</p> <p>SystemData</p> <p>tmp
+临时文件夹，iTUnes不会备份这个目录，用来保存临时数据，应用退出时可能会清楚该目录下的数据，一般开发者需要临时保存的数据但不需要长期保留使用可以放到此文件夹</p> <h2 id="数据持久化种类"><a href="#数据持久化种类" class="header-anchor">#</a> 数据持久化种类</h2> <ul><li>property list(属性列表)</li> <li>Preference(偏好设置)</li> <li>NSKeyedArchiver(归档)</li> <li>SQlite3/FMDB(嵌入式数据库)</li> <li>CoreData(面向对象的嵌入式数据库)</li></ul> <p>property list<br>
+只能存储系统自带的数据类型，一般实际开发中存储字典、数组，自定义的模型无法进行存储</p> <p>Preference<br>
+只能存储系统自带的数据类型，自定义的对象无法存储。<br>
+例如存储NSUserDefaults，NSUserDefault只能存取NSString、NSSArray、NSDictionary、NSData、NSNumber等类型。<br>
+偏好设置是专门用来保存应用程序的配置信息的，一般不要在偏好设置中保存其他数据。<br>
+如果没有调用synchronize方法，系统会根据I/O情况不定时刻地保存到文件中。所以如果需要立即写入文件的就必须调用synchronize方法。<br>
+偏好设置会将所有数据保存在同一个文件中。即Preference目录下的一个以此应用包名来命名的plist文件。</p> <p>NSKeyedArchiver<br>
+归档，又名序列化，把对象转成字节码，以文件的形式存储到磁盘上，程序运行过程中或者再猜重新打开程序的时候，可以通过解归档（反序列化）还原这些对象。<br>
+归档的对象是Foundation框架中的对象<br>
+归档和解归档其中任意对象都需要归档和解归档整个文件<br>
+归档后的文件是加密的，所以归档文件的扩展名可以随意取<br>
+在带键的归档中，每个归档都有一个key值，解归档时key值要与归档时key值匹配<br>
+如果一个自定义的类A，作为另一个自定义类B的一个属性存在；那么如果要对B进行归档，那么，B要实现NSCoding协议。并且，A也要实现NSCoding协议</p> <p>SQLite<br>
+SQLite数据库的几个特点：<br>
+基于C语言开发的轻型数据库<br>
+在iOS中需要使用C语言语法进行数据库操作、访问（无法使用ObjC直接访问，因为libsqlite3框架基于C语言编写）</p> <p>SQLite中采用的是动态数据类型，即使创建时定义了一种类型，在实际操作时也可以存储其他类型，但是推荐建库时使用合适的类型<br>
+建立连接后通常不需要关闭连接（尽管可以手动关闭）<br>
+在iOS中操作SQLite数据库可以分为以下几个步骤：<br>
+打开数据库，利用sqlite3_open()打开数据库会指定一个数据库文件保存路径，如果文件存在则直接打开，否则创建并打开。打开数据库会得到一个sqlite3类型的对象，后面需要借助这个对象进行其他操作。<br>
+执行SQL语句，执行SQL语句又包括有返回值的语句和无返回值的语句。<br>
+对于无返回值的语句（如增加、删除、修改等）直接通过sqlite3_exec()函数执行；<br>
+对于有返回值的语句则首先通过sqlite3_prepare_v2()进行sql语句评估（语法检测），然后sqlite3_step()依次取出查询结果的每一行数据，对于每行数据都可以通过对应的sqlite3_column_类型()方法获得对应列的数据，如此返回循环直到遍历完成。当然，最后需要释放句柄。</p> <p>索引：<br>
+使用索引的全部意义就是通过缩小一张表中需要查询的记录/行的数目来加宽搜索的速度。<br>
+什么是索引？<br>
+一个索引是存储的表中一个特定列的值数据结构(最常见的是B-Tree)。索引是在表的列上创建。所以，要记住的关键点是索引包含一个表中列的值，并且这些值存储在一个数据结构中。请记住这一点：索引是一种数据结构。<br>
+什么样的数据结构可以作为索引？<br>
+B-Tree是最常见的用于索引的数据结构。因为它们是时间复杂度低，查找、删除、插入操作都可以在对数时间内完成。另外一个重要原因存储在B-Tree中的数据是有序的。数据库管理系统通常决定索引应该用哪些数据结构。但是，在某些情况下，你在创建索引时可以指定索引要使用的数据结构。<br>
+哈希表索引时怎么工作的？<br>
+哈希表是另外一种你可能看到用作索引的数据结构-这些索引通常被称为哈希索引。使用哈希索引的原因是，在寻找值时哈希表效率极高。所以，如果使用哈希索引，对于比较字符串是否相等的查询能够极快的检索出值。<br>
+哈希索引的缺点<br>
+哈希表是无顺序的数据结构，对于很多类型的查询语句哈希索引都无能为力。距离来说，加入你想要找出所有小于40岁的员工。你怎么使用哈希索引进行查询？这不可行，因为哈希表只适合查询键值对-也就是说查询相等的查询（例如：like &quot;WHERE name = 'Jesus'）。哈希表的键值映射也暗示其键的存储是无序的。这就是为什么哈希索引通常不是数据库索引的默认数据结构-因为在作为索引的数据结构时，其不想B-Tree那么灵活<br>
+还有什么其他类型的索引？<br>
+使用R-Tree作为数据结构的索引通常用来为空间问题提供帮助。例如，一个查询要求“查询出所有距离我两公里內的星巴克”，如果数据库表使用R-Tree索引，这类查询的效率将会提高。<br>
+另外一种索引是位图索引(bitmap index)，这类索引适合放在包含布尔值(true和false)的列上，但是这些值(表示true或false的值)的许多实例-基本上都是选择性低的列。</p> <p>打开数据库</p> <div class="language-C extra-class"><pre class="language-c"><code><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">sqlite3_open</span><span class="token punctuation">(</span>filePath<span class="token punctuation">.</span>UTF8String<span class="token punctuation">,</span> <span class="token operator">&amp;</span>_database<span class="token punctuation">)</span> <span class="token operator">==</span> SQLite_OK<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">NSLog</span><span class="token punctuation">(</span>@<span class="token string">&quot;数据库打开成功&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>执行无返回结果的SQL</p> <div class="language-C extra-class"><pre class="language-c"><code><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">sqlite3_exec</span><span class="token punctuation">(</span>_database<span class="token punctuation">,</span> sql<span class="token punctuation">.</span>UTF8String<span class="token punctuation">,</span><span class="token constant">NULL</span><span class="token punctuation">,</span><span class="token constant">NULL</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>error<span class="token punctuation">)</span> <span class="token operator">!=</span> SQLITE_OK<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">NSLog</span><span class="token punctuation">(</span>@<span class="token string">&quot;执行SQL语句过程中发生错误，错误信息: %s&quot;</span><span class="token punctuation">,</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>执行有返回结果的SQL</p> <div class="language-C extra-class"><pre class="language-c"><code>sqlite3_stmt <span class="token operator">*</span>stmt<span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">sqlite3_prepare_v2</span><span class="token punctuation">(</span>_database<span class="token punctuation">,</span>sql<span class="token punctuation">.</span>UTF8String<span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>stmt<span class="token punctuation">,</span><span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token operator">==</span> SQLITE_OK<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token function">sqlite3_step</span><span class="token punctuation">(</span>stmt<span class="token punctuation">)</span> <span class="token operator">==</span> SQLITE_ROW<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> columnCount <span class="token operator">=</span> <span class="token function">sqlite3_column_count</span><span class="token punctuation">(</span>stmt<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    NSMutableDictionary <span class="token operator">*</span>dic <span class="token operator">=</span> <span class="token punctuation">[</span>NSMutableDictionary dictionary<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> columnCount<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>name <span class="token operator">=</span> <span class="token function">sqlite3_column_name</span><span class="token punctuation">(</span>stmt<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> <span class="token keyword">unsigned</span> <span class="token keyword">char</span> <span class="token operator">*</span>value <span class="token operator">=</span> <span class="token function">sqlite3_column_text</span><span class="token punctuation">(</span>stmt<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">[</span>dict setValue<span class="token operator">:</span><span class="token punctuation">[</span>NSString stringWithUTF8String<span class="token operator">:</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span>value<span class="token punctuation">]</span> forKey<span class="token operator">:</span> <span class="token punctuation">[</span>NSString stringWithUTF8String<span class="token operator">:</span>name<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">[</span>rows addObject<span class="token operator">:</span>dic<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">sqlite3_finalize</span><span class="token punctuation">(</span>stmt<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>CoreData<br>
+CoreData是iOS5之后才出现的一个框架，它提供了对象-关系映射（ORM）的功能，即能够将OC对象转化成数据，保存在SQLite数据库文件中，也能够将保存在数据库中的数据还原成OC对象。再次数据操作期间，我们不需要编写任何SQL语句<br>
+简介<br>
+Core Data是个框架（并不是数据库哦），它使开发者可以把数据当做对象来操作，而不必在乎数据在磁盘中的存储方式。对应iOS程序员来说，这很有用，因为我们已经可以通过代码非常熟悉的操作对象了。由Core Data所提供的数据对象叫做托管对象（Managed Object），而Core Data本身则位于你的应用程序和持久化存储区（Persistent store）之间。为了把数据从托管对象映射到持久化存储区中，Core Data需要使用托管对象模型。所有的托管对象都必须位于托管对象上下文（Managed object context）里面，而托管对象上下文又位于告诉的易市性存储器里面，也就是位于RAM中。<br>
+为什么需要有托管对象上下文呢？原因之一就是在托管于RAM之间传输数据时会有开销。磁盘读写速度比RAM慢得多，所以不应该频繁地访问它。有了托管对象上下文，就可以非常讯速地获取到了。但它的缺点在于，开发者必须在托管对象上下文上面定期调用save方法，以将变更后的数据写回磁盘。托管对象上下文的另一个功能是记录开发者对托管对象所对的修改，以提供完整的撤销和重做支持。</p> <h2 id="数据持久化区别"><a href="#数据持久化区别" class="header-anchor">#</a> 数据持久化区别</h2> <p><img src="/assets/img/数据持久化对比.d5193420.png" alt="数据持久化对比"></p> <h2 id="sqlite并发的四种处理方式"><a href="#sqlite并发的四种处理方式" class="header-anchor">#</a> SQLite并发的四种处理方式</h2> <p>SQLite.swift</p> <p>采用了最简单粗暴的一种方案，使用者只会得到一个数据库连接，所有的操作都是在该连接上串行执行，类库的作者并没有提供数据库连接池类似的特性。通过这种设计，任意时刻都只会存在一个线程对数据库拥有访问权限。并发问题被完美解决。</p> <p>然而却可能会出现多个线程执行同一条语句的问题。可通过事物来处理</p> <p>FMDB</p> <p>FMDB与SQLite.swift一样都是采用串行设计，只不过FMDB在此基础上做了些加强：FMDB中使用者不会接触到数据库连接而是通过在API闭包中组织语句来实现数据库访问。</p> <div class="language-C extra-class"><pre class="language-c"><code>dbQueue<span class="token punctuation">.</span>inDatabase <span class="token punctuation">{</span> db in
+    <span class="token keyword">if</span> db<span class="token punctuation">.</span><span class="token function">intForQuery</span><span class="token punctuation">(</span><span class="token string">&quot;SELECT COUNT ...&quot;</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        db<span class="token punctuation">.</span><span class="token function">executeUpdate</span><span class="token punctuation">(</span><span class="token string">&quot;INSERT INTO avatars ...&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这种方式不仅解决了同时写的问题而且还非常平滑的解决了操作隔离问题，相比上一个方案明显更为友好。</p> <p>GRDB</p> <p>此方案借鉴了FMDB中API设计，使用者通过在闭包中组织语句来实现数据库访问。不过与前两个相比，GRDB最大的不同就是它不再使用串行队列设计。通过对SQLite本身WAL模式进行，GRDB支持多线程同时进行读写操作。</p> <div class="language-C extra-class"><pre class="language-c"><code>try dbPool<span class="token punctuation">.</span>write <span class="token punctuation">{</span> db in
+    <span class="token keyword">if</span> Int<span class="token punctuation">.</span><span class="token function">fetchOne</span><span class="token punctuation">(</span>db<span class="token punctuation">,</span> <span class="token string">&quot;SELECT COUNT ...&quot;</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        try db<span class="token punctuation">.</span><span class="token function">execute</span><span class="token punctuation">(</span><span class="token string">&quot;INSERT INTO avatars ...&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>该模式最大的特点在于，我们在进行数据库写操作的同时，依然能并行的执行读操作。这意味着，在特定线程运行费时的数据库同步写操作的时候用于更新UI的数据库读操作不会像前两种方案一样被阻塞住。也就是说，写操作对于读操作来说是透明的。</p> <p>并且GRDB通过DatabaseSnapshot对数据库访问进行了读写分离实现，进一步提高了多线程访问的安全。</p> <p>总体而言，FMDB和GRDB采用的方式从安全性和灵活性上会更好一点。</p> <h2 id="第三方持久化方案"><a href="#第三方持久化方案" class="header-anchor">#</a> 第三方持久化方案</h2> <p>FMDB</p> <p>FMDatabase主要的两个方法：<br>
+executeUpdate和executeQuery</p> <div class="language-Objective-C extra-class"><pre class="language-text"><code>    dispatch_group_t group = dispatch_group_create();
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    [_db open];
+    dispatch_group_async(group, queue, ^{
+        FMDatabaseQueue *queue = [FMDatabaseQueue databaseQueueWithPath:self.dbPath];
+        [queue inDatabase:^(FMDatabase * _Nonnull db) {
+            BOOL result = [db executeUpdate:@&quot;insert into 't_student'(ID,name,phone,score) values(?,?,?,?)&quot; withArgumentsInArray:@[@134,@&quot;x3&quot;,@&quot;13&quot;,@&quot;53&quot;]];
+        }];
+    });
+    dispatch_group_async(group, queue, ^{
+        FMDatabaseQueue *queue = [FMDatabaseQueue databaseQueueWithPath:self.dbPath];
+        [queue inDatabase:^(FMDatabase * _Nonnull db) {
+            BOOL result = [db executeUpdate:@&quot;insert into 't_student'(ID,name,phone,score) values(?,?,?,?)&quot; withArgumentsInArray:@[@144,@&quot;x3&quot;,@&quot;13&quot;,@&quot;53&quot;]];
+        }];
+    });
+    dispatch_group_async(group, queue, ^{
+        FMDatabaseQueue *queue = [FMDatabaseQueue databaseQueueWithPath:self.dbPath];
+        [queue inDatabase:^(FMDatabase * _Nonnull db) {
+            BOOL result = [db executeUpdate:@&quot;insert into 't_student'(ID,name,phone,score) values(?,?,?,?)&quot; withArgumentsInArray:@[@146,@&quot;x3&quot;,@&quot;13&quot;,@&quot;53&quot;]];
+        }];
+    });
+    dispatch_group_notify(group, queue, ^{
+        NSLog(@&quot;完成 - %@&quot;, [NSThread currentThread]);
+        [self.db close];
+    });
+</code></pre></div><p>FMDatabase这个类是非线程安全的，FMDatabaseQueue是线程安全的。</p> <p>Realm-cocoa</p> <ul><li>Realm是用于移动端的数据库，目前支持iOS和Android平台，它相比于SQLite和CoreData使用简单，学习成本低，性能跟高效。</li> <li>Realm不是基于Core Data，也不是基于SQLite封装构建的。它有自己的数据库存储引擎。</li> <li>由于Realm在自己的引擎内部有很好的语义解释系统，所以Objective-C的许多属性特性将被忽略，如nonatomic,atomic,storng,copy和weak等。编写数据模型的时候不要使用任何的属性特性。</li></ul> <p>WCDB</p> <p>基于SQLCipher，支持对象关系映射，支持多线程并发，高性能，加密，关系型数据库</p> <h2 id="数据库类型"><a href="#数据库类型" class="header-anchor">#</a> 数据库类型</h2> <p>关系型数据库<br>
+CoreData<br>
+FMDB
+WCDB</p> <p>key-value数据库<br>
+Realm<br>
+LevelDB<br>
+RocksDB</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/iOS知识体系/动画.html" class="prev">
+        动画
+      </a></span> <span class="next"><a href="/iOS知识体系/加密.html">
+        加密
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.9de76d75.js" defer></script><script src="/assets/js/2.98ea7a63.js" defer></script><script src="/assets/js/14.b5068189.js" defer></script>
+  </body>
+</html>
